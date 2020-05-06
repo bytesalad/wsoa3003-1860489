@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Avatar_Movement : MonoBehaviour
+public class Avatar_Movement_Force_Based : MonoBehaviour
 {
     [SerializeField] private float movement_speed;
     [SerializeField] private KeyCode movement_start_key;
@@ -19,7 +19,9 @@ public class Avatar_Movement : MonoBehaviour
         if (initial_key_press)
         {
             mouse_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = Vector2.Lerp(transform.position, mouse_pos, movement_speed * Time.deltaTime);
+            //transform.position = Vector2.Lerp(transform.position, mouse_pos, movement_speed * Time.deltaTime);
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2((mouse_pos.x - transform.position.x) * movement_speed, (mouse_pos.y - transform.position.y) * 
+                movement_speed);
         }
     }
 }
