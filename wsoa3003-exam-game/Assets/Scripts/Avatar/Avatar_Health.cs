@@ -6,6 +6,7 @@ public class Avatar_Health : MonoBehaviour
 {
     [SerializeField] private int max_health;
     [SerializeField] private int current_health;
+    [SerializeField] private Quick_Endgame endgame_text;
 
     public int GetMaxHealth()
     {
@@ -28,6 +29,7 @@ public class Avatar_Health : MonoBehaviour
         else if (final < 0)
         {
             //game over
+            endgame_text.End();
             current_health = 0;
         }
         else
