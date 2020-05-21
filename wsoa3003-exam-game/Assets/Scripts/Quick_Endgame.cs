@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Quick_Endgame : MonoBehaviour
 {
-    [SerializeField] private string text;
+    [SerializeField] private string scene_load;
 
     public void End()
     {
-        gameObject.GetComponent<Text>().text = text;
+        SceneManager.LoadScene(scene_load);
     }
 }

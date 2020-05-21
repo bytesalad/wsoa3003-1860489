@@ -9,6 +9,11 @@ public class Avatar_Movement_Force_Based : MonoBehaviour
     private Vector2 mouse_pos;
     private bool initial_key_press = false;
 
+    public bool GetInitialKeyPress()
+    {
+        return initial_key_press;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(movement_start_key))

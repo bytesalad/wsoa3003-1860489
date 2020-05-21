@@ -11,8 +11,7 @@ public class Goal_Trigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Blue")
         {
-            //SceneManager.LoadScene(next_scene_name);
-            Debug.Log("Level Finished");
+            SceneManager.LoadScene(next_scene_name);
         }
     }
 }

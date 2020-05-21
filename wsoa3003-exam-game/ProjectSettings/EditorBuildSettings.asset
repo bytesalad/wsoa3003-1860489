@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MechanicsPrototypeScene.unity
     guid: 4d9986d3345259b4583dabde75714a1c
+  - enabled: 1
+    path: Assets/Scenes/LevelComplete.unity
+    guid: 960e20437f887b046a4b37d599f1fa84
   m_configObjects: {}
