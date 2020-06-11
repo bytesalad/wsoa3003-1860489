@@ -11,9 +11,9 @@ public class Camera_Move : MonoBehaviour
     [SerializeField] private float small_diff_value = 0.0000001f;
     private Vector2 current_move_location;
 
-    private void Start()
+    public bool IsDone()
     {
-        current_move_location = locations[0];
+        return move;
     }
 
     public void InitiateMove(int index_location)
@@ -25,16 +25,17 @@ public class Camera_Move : MonoBehaviour
         move = true;
     }
 
+    private void Start()
+    {
+        current_move_location = locations[0];
+    }
+
     private void Update()
     {
         if (move)
         {
             Vector3 current_move_location_V3 = new Vector3(current_move_location.x, current_move_location.y, camera_depth);
             gameObject.transform.position = Vector3.Lerp(transform.position, current_move_location_V3, movement_speed * Time.deltaTime);
-
-            //bool x = Mathf.Approximately(gameObject.transform.position.x, current_move_location_V3.x);
-            //bool y = Mathf.Approximately(gameObject.transform.position.y, current_move_location_V3.y);
-            //bool z = Mathf.Approximately(gameObject.transform.position.z, current_move_location_V3.z);
 
             bool x = false, y = false, z = false;
 

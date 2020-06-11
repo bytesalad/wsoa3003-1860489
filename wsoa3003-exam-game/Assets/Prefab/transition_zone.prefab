@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5554878255867880637}
   - component: {fileID: 5554878255867880638}
   - component: {fileID: 5554878255867880639}
+  - component: {fileID: 6240846966671258253}
   m_Layer: 0
   m_Name: transition_zone
   m_TagString: Untagged
@@ -72,3 +73,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera_move_script: {fileID: 0}
   location_index: 0
+  isActive: 1
+--- !u!114 &6240846966671258253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554878255867880636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374ae3bf1cf2b6248af89fc51247cc44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerScript: {fileID: 0}
