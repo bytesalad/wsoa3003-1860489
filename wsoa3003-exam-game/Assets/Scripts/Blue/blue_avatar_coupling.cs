@@ -7,6 +7,7 @@ public class blue_avatar_coupling : MonoBehaviour
     [SerializeField] private float follow_speed;
     private GameObject avatar;
     private bool follow = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Avatar")
