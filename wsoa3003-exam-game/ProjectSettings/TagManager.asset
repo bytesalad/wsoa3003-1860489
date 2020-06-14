@@ -7,6 +7,7 @@ TagManager:
   - Red
   - Avatar
   - Blue
+  - Goal
   layers:
   - Default
   - TransparentFX

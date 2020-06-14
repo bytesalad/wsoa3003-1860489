@@ -6,37 +6,43 @@ public class blue_coupling : MonoBehaviour
 {
     [SerializeField] private float follow_speed_avatar;
     [SerializeField] private float follow_speed_goal;
-    private GameObject avatar;
-    private GameObject goal;
-    private bool follow_avatar = false;
-    private bool follow_goal = false;
+    [SerializeField] private boundary_gap_open boundary_Gap_Open;
+    private GameObject follow;
+    private bool couple_avatar = false;
+    private bool couple_goal = false;
+    private bool initiate_open = false;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Avatar" && !follow_goal)
+        if (collision.gameObject.tag == "Avatar" && !couple_goal)
         {
-            avatar = collision.gameObject;
-            follow_avatar = true;
+            follow = collision.gameObject;
+            couple_avatar = true;
         }
         if (collision.gameObject.tag == "Goal")
         {
-            goal = collision.gameObject;
-            follow_avatar = false;
-            follow_goal = true;
+            follow = collision.gameObject;
+            couple_avatar = false;
+            couple_goal = true;
         }
     }
 
     private void Update()
     {
-        if (follow_avatar)
+        if (couple_avatar)
         {
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2((avatar.transform.position.x - transform.position.x) * follow_speed_avatar,
-                (avatar.gameObject.transform.position.y - transform.position.y) * follow_speed_avatar);
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2((follow.transform.position.x - transform.position.x) * follow_speed_avatar,
+                (follow.gameObject.transform.position.y - transform.position.y) * follow_speed_avatar);
         }
-        else if (follow_goal)
+        else if (couple_goal)
         {
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2((avatar.transform.position.x - transform.position.x) * follow_speed_avatar,
-                (avatar.gameObject.transform.position.y - transform.position.y) * follow_speed_goal);
+            if (!initiate_open)
+            {
+                boundary_Gap_Open.Open();
+                initiate_open = true;
+            }
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2((follow.transform.position.x - transform.position.x) * follow_speed_avatar,
+                (follow.gameObject.transform.position.y - transform.position.y) * follow_speed_goal);
         }
     }
 }
