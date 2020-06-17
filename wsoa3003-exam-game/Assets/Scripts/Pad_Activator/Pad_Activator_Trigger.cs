@@ -5,6 +5,8 @@ using UnityEngine;
 public class Pad_Activator_Trigger : MonoBehaviour
 {
     [SerializeField] private GameObject[] connected_pads;
+    [SerializeField] private Color32 tint;
+    [SerializeField] private Material tintMat;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,8 +15,10 @@ public class Pad_Activator_Trigger : MonoBehaviour
             for (int i = 0; i < connected_pads.Length; i++)
             {
                 connected_pads[i].GetComponent<BoxCollider2D>().enabled = false;
+                //tint the pad:
+                connected_pads[i].GetComponent<SpriteRenderer>().material = tintMat;
             }
-            gameObject.SetActive(false);
+            gameObject.GetComponent<SpriteRenderer>().material = tintMat;
         }
     }
 }

@@ -315,6 +315,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 538966514}
     m_Modifications:
+    - target: {fileID: 1751420376603086343, guid: 8ec5dcfe178647744b625be4fe1aa832,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751420376603086343, guid: 8ec5dcfe178647744b625be4fe1aa832,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1751420376603086343, guid: 8ec5dcfe178647744b625be4fe1aa832,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1751420376603086344, guid: 8ec5dcfe178647744b625be4fe1aa832,
         type: 3}
       propertyPath: m_Name
@@ -2550,7 +2565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement_speed: 4
-  movement_start_key: 323
+  movement_start_key: 0
 --- !u!58 &1726681825
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2630,6 +2645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purple_colour: {r: 0.8117647, g: 0, b: 1, a: 0}
   particle_system: {fileID: 1746777560}
+  purple_mat: {fileID: 2100000, guid: ee083b011c1f79447bf86299d9ba82ee, type: 2}
 --- !u!1 &1746777557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2734,7 +2750,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1746777557}
   serializedVersion: 6
-  lengthInSec: 2
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -8583,6 +8599,31 @@ PrefabInstance:
       propertyPath: connected_pads.Array.data[1]
       value: 
       objectReference: {fileID: 1825863633}
+    - target: {fileID: 9085678260429598650, guid: 0297990ce5d0c284aaa0a5290287f594,
+        type: 3}
+      propertyPath: tint.r
+      value: 0.7924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085678260429598650, guid: 0297990ce5d0c284aaa0a5290287f594,
+        type: 3}
+      propertyPath: tint.g
+      value: 0.7924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085678260429598650, guid: 0297990ce5d0c284aaa0a5290287f594,
+        type: 3}
+      propertyPath: tint.b
+      value: 0.7924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085678260429598650, guid: 0297990ce5d0c284aaa0a5290287f594,
+        type: 3}
+      propertyPath: tint.rgba
+      value: 6974058
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085678260429598650, guid: 0297990ce5d0c284aaa0a5290287f594,
+        type: 3}
+      propertyPath: tintMat
+      value: 
+      objectReference: {fileID: 2100000, guid: f758ba4d0fde40b4f986fdfac21001bc, type: 2}
     - target: {fileID: 9085678260429598652, guid: 0297990ce5d0c284aaa0a5290287f594,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8642,6 +8683,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pad_Activator_Purple
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085678260429598655, guid: 0297990ce5d0c284aaa0a5290287f594,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085678260429598655, guid: 0297990ce5d0c284aaa0a5290287f594,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085678260429598655, guid: 0297990ce5d0c284aaa0a5290287f594,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085678260429598655, guid: 0297990ce5d0c284aaa0a5290287f594,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0297990ce5d0c284aaa0a5290287f594, type: 3}

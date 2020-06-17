@@ -16,11 +16,6 @@ public class Avatar_Movement_Force_Based : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(movement_start_key))
-        {
-            initial_key_press = true;
-        }
-
         if (initial_key_press)
         {
             mouse_pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -28,5 +23,10 @@ public class Avatar_Movement_Force_Based : MonoBehaviour
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2((mouse_pos.x - transform.position.x) * movement_speed, (mouse_pos.y - transform.position.y) * 
                 movement_speed);
         }
+    }
+
+    private void OnMouseDown()
+    {
+        initial_key_press = true;
     }
 }
