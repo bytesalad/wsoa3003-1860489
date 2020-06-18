@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Avatar_Health : MonoBehaviour
 {
     [SerializeField] private int max_health;
     [SerializeField] private int current_health;
     [SerializeField] private Quick_Endgame endgame_text;
+    [SerializeField] private Text health_text;
 
     public int GetMaxHealth()
     {
@@ -37,5 +39,10 @@ public class Avatar_Health : MonoBehaviour
             current_health = final;
         }
         return current_health;
+    }
+
+    private void Update()
+    {
+        health_text.text = "Health: " + current_health.ToString();
     }
 }

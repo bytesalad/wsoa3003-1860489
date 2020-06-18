@@ -5,7 +5,6 @@ using UnityEngine;
 public class Pad_Activator_Trigger : MonoBehaviour
 {
     [SerializeField] private GameObject[] connected_pads;
-    [SerializeField] private Color32 tint;
     [SerializeField] private Material tintMat;
 
     private void OnTriggerEnter2D(Collider2D collision)

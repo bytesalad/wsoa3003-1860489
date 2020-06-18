@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Avatar_Movement_Force_Based : MonoBehaviour
 {
     [SerializeField] private float movement_speed;
-    [SerializeField] private KeyCode movement_start_key;
     private Vector2 mouse_pos;
     private bool initial_key_press = false;
+    [SerializeField] private Text click_start;
 
     public bool GetInitialKeyPress()
     {
@@ -28,5 +29,6 @@ public class Avatar_Movement_Force_Based : MonoBehaviour
     private void OnMouseDown()
     {
         initial_key_press = true;
+        click_start.gameObject.SetActive(false);
     }
 }
