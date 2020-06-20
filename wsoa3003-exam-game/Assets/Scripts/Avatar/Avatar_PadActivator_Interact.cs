@@ -7,12 +7,19 @@ public class Avatar_PadActivator_Interact : MonoBehaviour
     [SerializeField] private ParticleSystem particle_system;
     [SerializeField] private Material no_tint;
     [SerializeField] private Material purple_mat;
+    [SerializeField] private Material green_mat;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Purple_Pad_Activator")
         {
             gameObject.GetComponent<SpriteRenderer>().material = purple_mat;
+            particle_system.Play();
+        }
+
+        if (collision.gameObject.tag == "Green_Pad_Activator")
+        {
+            gameObject.GetComponent<SpriteRenderer>().material = green_mat;
             particle_system.Play();
         }
 

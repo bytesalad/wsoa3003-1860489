@@ -10,6 +10,7 @@ TagManager:
   - Goal
   - Purple_Pad_Activator
   - Colour_Reset
+  - Green_Pad_Activator
   layers:
   - Default
   - TransparentFX
