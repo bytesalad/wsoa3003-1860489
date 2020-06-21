@@ -113,3 +113,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   connected_pads:
   - {fileID: 0}
+  tintMat: {fileID: 0}
+  no_tint_mat: {fileID: 0}
+  to_deactivate: []
