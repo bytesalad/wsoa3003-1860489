@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 1820927007}
   - component: {fileID: 1820927006}
   m_Layer: 5
-  m_Name: level_complete
+  m_Name: game_over
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -572,8 +572,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3, y: 4.6}
-  m_SizeDelta: {x: 1593.5, y: 601.4}
+  m_AnchoredPosition: {x: -3, y: -25.2}
+  m_SizeDelta: {x: 1547.7, y: 660.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1820927006
 MonoBehaviour:
@@ -606,21 +606,20 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Well done,  Complete!
+  m_Text: 'Game Over!
 
 
-    Thank you for playing my prototype game.
+    Press Enter/Return to restart.
 
 
-    Press
-    ESC to exit.
+    Press ESC to exit.
 
 
-    Game Design/Development: Matthew Brown
+    Game
+    Design/Development: Matthew Brown
 
 
-    Font: Ray Larabie
-    - neuropol x rg'
+    Font: Ray Larabie - neuropol x rg'
 --- !u!222 &1820927007
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -642,6 +641,7 @@ GameObject:
   - component: {fileID: 2031877431}
   - component: {fileID: 2031877430}
   - component: {fileID: 2031877434}
+  - component: {fileID: 2031877435}
   m_Layer: 5
   m_Name: ui
   m_TagString: Untagged
@@ -743,6 +743,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exit_button: 27
+--- !u!114 &2031877435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031877429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3ff142f9ecf7c49bde1eb484b3d5ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene_to_load: MechanicsPrototypeScene
+  restart: 13
 --- !u!1001 &648441964988125196
 PrefabInstance:
   m_ObjectHideFlags: 0

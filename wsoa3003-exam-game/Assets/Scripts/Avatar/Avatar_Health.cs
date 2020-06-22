@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Avatar_Health : MonoBehaviour
 {
     [SerializeField] private int max_health;
     [SerializeField] private int current_health;
-    [SerializeField] private Quick_Endgame endgame_text;
     [SerializeField] private Text health_text;
+    [SerializeField] private string end_game_scene;
 
     public int GetMaxHealth()
     {
@@ -28,10 +29,10 @@ public class Avatar_Health : MonoBehaviour
             //clamp current health
             current_health = max_health;
         }
-        else if (final < 0)
+        else if (final == 0)
         {
             //game over
-            endgame_text.End();
+            SceneManager.LoadScene(end_game_scene);
             current_health = 0;
         }
         else
